@@ -8,3 +8,6 @@ dependencies = [
     "pytest-watcher>=0.4.3",
     "pytest>=8.3.4",
 ]
+
+[tool.ruff]
+line-length = 80
