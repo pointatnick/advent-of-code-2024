@@ -18,3 +18,13 @@ def test_it_checks_if_list_is_decreasing():
 def test_it_checks_if_list_differs_enough():
     assert puzzle.is_safe_difference([7, 6, 4, 2, 1]) is True
     assert puzzle.is_safe_difference([1, 2, 7, 8, 9]) is False
+
+
+def test_it_dampens_a_report():
+    assert puzzle.dampen([1, 2, 7, 8, 9]) == [
+        [2, 7, 8, 9],
+        [1, 7, 8, 9],
+        [1, 2, 8, 9],
+        [1, 2, 7, 9],
+        [1, 2, 7, 8],
+    ]
